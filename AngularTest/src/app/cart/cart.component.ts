@@ -10,13 +10,28 @@ import { FormBuilder } from '@angular/forms';
 export class CartComponent implements OnInit {
 //to store items in the cart
   items;
+  //to store the form model
+  checkoutForm;
   constructor(
     
-    private cartService: CartService
-  ) { }
+    private cartService: CartService,
+    private formBuilder: FormBuilder,
+  ) {
+    this.checkoutForm = this.formBuilder.group({
+      name: '',
+      address: ''
+    });
+   }
 
   ngOnInit() {
     this.items = this.cartService.getItems();
+  }
+
+  onSubmit(customerData) {
+    // Process checkout data here
+    this.items = this.cartService.clearCart();
+    this.checkoutForm.reset();
+    console.warn('Your order has been submitted', customerData);
   }
 
 }
