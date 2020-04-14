@@ -15,7 +15,8 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule} from '@angular/material/input';
 
 @NgModule({
