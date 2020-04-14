@@ -14,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { DatePickerComponent } from './date-picker/date-picker.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { MatInputModule} from '@angular/material/input';
@@ -28,7 +27,6 @@ import { MatInputModule} from '@angular/material/input';
     CartComponent,
     TopBarComponent,
     ShippingComponent,
-    DatePickerComponent
   ],
   schemas: [
      CUSTOM_ELEMENTS_SCHEMA
