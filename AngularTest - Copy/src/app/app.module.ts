@@ -18,6 +18,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule} from '@angular/material/input';
+import { PickerComponent } from './picker/picker.component';
+import {MatButtonModule} from '@angular/material/button'; 
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { MatInputModule} from '@angular/material/input';
     CartComponent,
     TopBarComponent,
     ShippingComponent,
+    PickerComponent,
   ],
   schemas: [
      CUSTOM_ELEMENTS_SCHEMA
@@ -43,12 +46,14 @@ import { MatInputModule} from '@angular/material/input';
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'picker', component: PickerComponent },
     ]),
     BrowserAnimationsModule,
     MatSliderModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
